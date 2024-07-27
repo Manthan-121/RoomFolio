@@ -44,7 +44,10 @@
     <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
-
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-select-bs5/select.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-fixedcolumns-bs5/fixedcolumns.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-fixedheader-bs5/fixedheader.bootstrap5.css" />
     <!-- Page CSS -->
 
     <link rel="stylesheet" href="../../assets/vendor/css/pages/app-logistics-dashboard.css" />
@@ -304,10 +307,13 @@
     <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
     <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
+
     <!-- Main JS -->
     <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
     <script src="../../assets/js/app-logistics-dashboard.js"></script>
+    <script src="../../assets/js/tables-datatables-extensions.js"></script>
+    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
   </body>
 </html>

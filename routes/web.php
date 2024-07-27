@@ -31,3 +31,8 @@ Route::get('/', function () {
 Route::get('apartment', function () {
     return view('apartment');
 })->name('apartment');
+
+// apartment add rout
+Route::get('apartment-add', function () {
+    return view('apartadd');
+})->name('apartmentadd');
