@@ -27,14 +27,15 @@
             <!-- /Logo -->
             <h4 class="mb-5">Welcome to RoomFoliyo! 👋</h4>
 
-            <form id="formAuthentication" class="mb-6" action="#" method="GET">
+            <form id="formAuthentication" class="mb-6" action="{{ route('post-login') }}" method="post">
+                @csrf
               <div class="mb-6">
                 <label for="email" class="form-label">Email </label>
                 <input
                   type="text"
                   class="form-control"
                   id="email"
-                  name="email"
+                  name="ad_email"
                   placeholder="Enter your email"
                   autofocus />
               </div>
@@ -45,7 +46,7 @@
                     type="password"
                     id="password"
                     class="form-control"
-                    name="password"
+                    name="ad_password"
                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                     aria-describedby="password" />
                   <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
@@ -66,7 +67,15 @@
                 <button class="btn btn-primary d-grid w-100" type="submit">Login</button>
               </div>
             </form>
-
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
           </div>
         </div>

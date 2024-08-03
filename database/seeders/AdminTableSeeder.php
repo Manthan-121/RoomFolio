@@ -16,9 +16,9 @@ class AdminTableSeeder extends Seeder
     {
         DB::table('tbl_admin')->insert([
             'ad_name' => 'Admin',
-            'ad_email' => 'admin@example.com',
+            'ad_email' => 'admin@roomfolio.com',
             'ad_mobile' => '1234567890',
-            'ad_password' => Hash::make('password'),
+            'ad_password' => Hash::make('admin@123'),
             'ad_dp_image' => 'default.png',
             'ad_address' => '123 Main Street',
             'ad_pwd_reset_tk' => null,
