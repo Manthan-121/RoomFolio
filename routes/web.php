@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminAuth;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\ApartmentController;
+use App\Http\Controllers\CategoryController;
 
 // Login rout
 Route::controller(AdminAuthController::class)->group(function () {
@@ -21,17 +22,30 @@ Route::middleware(['admin'])->group(function () {
     })->name('home');
 
     Route::controller(ApartmentController::class)->group(function () {
-        Route::get('apartment', 'showApartment')->name('apartment');
+        Route::get('Apartment', 'showApartment')->name('apartment');
 
-        Route::get('apartment/add', 'addApartment')->name('apartmentadd');
-        Route::post('apartment/add', 'storeApartment')->name('post-apartmentadd');
+        Route::get('Apartment/add', 'addApartment')->name('apartmentadd');
+        Route::post('Apartment/add', 'storeApartment')->name('post-apartmentadd');
 
-        Route::get('apartments/edit/{id?}',  'editApartment')->name('apartmentedit');
-        Route::put('apartments/edit/{id}', 'updateApartment')->name('put-apartmentedit');
+        Route::get('Apartments/edit/{id?}',  'editApartment')->name('apartmentedit');
+        Route::put('Apartments/edit/{id}', 'updateApartment')->name('put-apartmentedit');
 
-        Route::delete('apartment-delete/{id}', 'deleteApartment')->name('apatmentdelete');
+        Route::delete('Apartment-delete/{id}', 'deleteApartment')->name('apatmentdelete');
 
     });
+
+    Route::controller(CategoryController::class)->group(function () {
+        Route::get('Categorie', 'showCategorie')->name('Categorie');
+
+        Route::post('Categorie/add', 'storeCategorie')->name('postCategorie');
+
+        Route::get('Categorie/edit/{id?}',  'editCategorie')->name('Categorieedit');
+        Route::put('Categorie/edit/{id}', 'updateCategorie')->name('put-Categorieedit');
+
+        Route::delete('category-delete/{id}', 'deleteCategorie')->name('Categoriedelete');
+
+    });
+
 
     // profile rout
     Route::get('profile', function () {

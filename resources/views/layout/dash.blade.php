@@ -82,30 +82,29 @@
 
                     <li class="menu-item">
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
-                          <i class="menu-icon tf-icons bx bx-buildings"></i>
-                          <div class="text-truncate" data-i18n="Apartment">Apartment</div>
+                            <i class="menu-icon tf-icons bx bx-buildings"></i>
+                            <div class="text-truncate" data-i18n="Apartment">Apartment</div>
                         </a>
                         <ul class="menu-sub">
-                          <li class="menu-item">
-                            <a href="{{ route('apartmentadd') }}" class="menu-link">
-                              <div class="text-truncate" data-i18n="Add">Add</div>
-                            </a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="{{ route('apartment') }}" class="menu-link">
-                              <div class="text-truncate" data-i18n="Show">Show</div>
-                            </a>
-                          </li>
+                            <li class="menu-item">
+                                <a href="{{ route('apartmentadd') }}" class="menu-link">
+                                    <div class="text-truncate" data-i18n="Add">Add</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('apartment') }}" class="menu-link">
+                                    <div class="text-truncate" data-i18n="Show">Show</div>
+                                </a>
+                            </li>
                         </ul>
-                      </li>
-
-                    <li class="menu-item">
-                        <a href="{{ route('apartment') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-home-smile"></i>
-                            <div class="text-truncate">Apartment</div>
-                        </a>
                     </li>
 
+                    <li class="menu-item">
+                        <a href="{{ route('Categorie') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-category"></i>
+                            <div class="text-truncate">Categorie</div>
+                        </a>
+                    </li>
 
                 </ul>
             </aside>

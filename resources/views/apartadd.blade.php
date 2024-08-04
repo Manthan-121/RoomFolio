@@ -41,7 +41,7 @@
             </div>
             <div class="row justify-content-end mb-10">
                 <div class="col-sm-10">
-                    <button type="submit" name="btnSubmit" class="btn btn-primary">Add</button>
+                    <button type="submit" name="btnSubmit" class="btn btn-primary"> Add</button>
                 </div>
             </div>
             </form>
