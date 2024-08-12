@@ -25,7 +25,7 @@ class AdminAuthController extends Controller
 
         $admin = DB::table('tbl_admin')->where('ad_email', $request->ad_email)->first();
 
-        if ($admin && Hash ::check($request->ad_password, $admin->ad_password)) {
+        if ($admin && Hash::check($request->ad_password, $admin->ad_password)) {
 
             Session::put('admin_id', $admin->ad_id);
 
