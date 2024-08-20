@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('tbl_floor_details', function (Blueprint $table) {
             $table->integer('floor_no')->after('ap_id');
+            $table->integer('flate_no')->after('floor_no');
         });
     }
 
@@ -22,7 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('tbl_floor_details', function (Blueprint $table) {
-            $table->dropColumn('floor_no');
+            $table->dropColumn('floor_no','flate_no');
         });
     }
 };

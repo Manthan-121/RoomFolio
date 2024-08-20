@@ -31,10 +31,8 @@
                     <tr>
                         <th>#</th>
                         <th>Image</th>
-                        <th>Floor</th>
-                        <th>Appartment</th>
-                        <th>Owner Name</th>
-                        <th>Floor No</th>
+                        <th>Flat No</th>
+                        <th>Owner</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -45,21 +43,23 @@
                     @foreach ($floors as $floor)
                         <tr>
                             <td>{{ $sqn }}</td>
-                            <td>{{ $floor->floor_ownor_img }}</td>
-                            <td>{{ $floor->ap_name }}</td>
+                            <td>
+                                <img height="75px" width="75px" src="{{ asset('/storage/images/floor_owner/'.$floor->floor_ownor_img) }}" alt="owner_img_{{ $sqn}}">
+                            </td>
+                            <td>{{ $floor->ap_remark }} {{$floor->flate_no}}</td>
                             <td>{{ $floor->floor_ownor }}</td>
                             <td>
                                 <div class="d-flex">
                                     <a href="{{ route('FloorDetails') }}" class="btn btn-icon btn-outline-primary">
                                         <span class="tf-icons bx bxs-edit"></span>
                                     </a>
-                                    {{-- <form action="{{ route('Categoriedelete', $categories->cat_id) }}" method="POST">
+                                    <form action="#" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-icon btn-outline-danger">
                                             <span class="tf-icons bx bx-trash"></span>
                                         </button>
-                                    </form> --}}
+                                    </form>
                                 </div>
                             </td>
                         </tr>
@@ -67,30 +67,12 @@
                             $sqn++;
                         @endphp
                     @endforeach
-                    <tr>
-                        <td>1</td>
-                        <td>Demo Image</td>
-                        <td>Shanti Vihar</td>
-                        <td>Manthan Mistry</td>
-                        <td>5</td>
-                        <td>
-                            <div class="d-flex">
-                                <a href="#" class="btn btn-icon btn-outline-primary">
-                                    <span class="tf-icons bx bxs-edit"></span>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-outline-danger">
-                                    <span class="tf-icons bx bx-trash"></span>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
                 <tfoot>
                     <tr>
                         <th>#</th>
                         <th>Image</th>
-                        <th>Appartment</th>
-                        <th>Owner Name</th>
-                        <th>Floor</th>
+                        <th>Flat No</th>
+                        <th>Owner</th>
                         <th>Action</th>
                     </tr>
                 </tfoot>

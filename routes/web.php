@@ -51,7 +51,7 @@ Route::middleware(['admin'])->group(function () {
         Route::get('FloorDetails', 'showFloorDetails')->name('FloorDetails');
 
         Route::get('FloorDetails/add', 'addFloorDetails')->name('FloorDetailsadd');
-        // Route::post('FloorDetails/add', 'storeFloorDetails')->name('postFloorDetails');
+        Route::post('Floordtl/add', 'storeFloorDetails')->name('postFloorDetails');
 
         // Route::get('FloorDetails/edit/{id?}',  'editFloorDetails')->name('FloorDetailsedit');
         // Route::put('FloorDetails/edit/{id}', 'updateFloorDetails')->name('put-FloorDetailsedit');
