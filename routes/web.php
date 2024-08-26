@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\AdminAuth;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\ApartmentController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FloorDetailsController;
+use App\Http\Controllers\VisitorController;
 
 // Login rout
 Route::controller(AdminAuthController::class)->group(function () {
@@ -53,13 +53,16 @@ Route::middleware(['admin'])->group(function () {
         Route::get('FloorDetails/add', 'addFloorDetails')->name('FloorDetailsadd');
         Route::post('Floordtl/add', 'storeFloorDetails')->name('postFloorDetails');
 
-        // Route::get('FloorDetails/edit/{id?}',  'editFloorDetails')->name('FloorDetailsedit');
-        // Route::put('FloorDetails/edit/{id}', 'updateFloorDetails')->name('put-FloorDetailsedit');
+        Route::get('FloorDetails/edit/{id?}',  'editFloorDetails')->name('FloorDetailsedit');
+        Route::put('FloorDetails/edit/{id}', 'updateFloorDetails')->name('put-FloorDetailsedit');
 
-        // Route::delete('FloorDetails-delete/{id}', 'deleteFloorDetails')->name('FloorDetailsdelete');
+        Route::delete('FloorDetails-delete/{id}', 'deleteFloorDetails')->name('FloorDetailsdelete');
 
     });
 
+    Route::resource('visitors', VisitorController::class);
+
+    
     // profile rout
     Route::get('profile', function () {
         return view('profile');

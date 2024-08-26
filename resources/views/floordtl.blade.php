@@ -50,10 +50,10 @@
                             <td>{{ $floor->floor_ownor }}</td>
                             <td>
                                 <div class="d-flex">
-                                    <a href="{{ route('FloorDetails') }}" class="btn btn-icon btn-outline-primary">
+                                    <a href="{{ route('FloorDetailsedit', $floor->floor_id) }}" class="btn btn-icon btn-outline-primary">
                                         <span class="tf-icons bx bxs-edit"></span>
                                     </a>
-                                    <form action="#" method="POST">
+                                    <form action="{{ route('FloorDetailsdelete', $floor->floor_id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-icon btn-outline-danger">
