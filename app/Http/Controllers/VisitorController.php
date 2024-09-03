@@ -10,7 +10,7 @@ class VisitorController extends Controller
     public function index()
     {
         $visitors = DB::table('tbl_visitor')->get();
-        return view('visitors.index', compact('visitors'));
+        return view('visitordtl', compact('visitors'));
     }
 
     public function create()

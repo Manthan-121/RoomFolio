@@ -123,6 +123,24 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-male-female"></i>
+                            <div class="text-truncate" data-i18n="Visitors">Visitors</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <div class="text-truncate" data-i18n="Add">Add</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('visitors.index') }}" class="menu-link">
+                                    <div class="text-truncate" data-i18n="Show">Show</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
 
                 </ul>
