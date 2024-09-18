@@ -60,9 +60,11 @@ Route::middleware(['admin'])->group(function () {
 
     });
 
+    Route::get('/get-floors', [VisitorController::class, 'getFloors'])->name('getFloors');
+
     Route::resource('visitors', VisitorController::class);
 
-    
+
     // profile rout
     Route::get('profile', function () {
         return view('profile');

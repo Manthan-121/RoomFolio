@@ -31,7 +31,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Apartment</th>
+                        <th>Flat No</th>
                         <th>Name</th>
                         <th>Entry</th>
                         <th>Exit</th>
@@ -43,13 +43,13 @@
                     @php
                         $sqn = 1;
                     @endphp
-                    {{-- @foreach ($apartments as $apartment)
+                    @foreach ($visitors as $visitors)
                         <tr>
                             <td>{{ $sqn }}</td>
-                            <td>{{ $apartment->ap_name }}</td>
-                            <td>{{ $apartment->ap_remark }}</td>
-                            <td>{{ $apartment->ap_tot_floor }}</td>
-                            <td>{{ $apartment->created_at }}</td>
+                            <td>{{ $visitors->ap_remark }} {{$visitors->flate_no}}</td>
+                            <td>{{ $visitors->ap_remark }}</td>
+                            <td>{{ $visitors->ap_tot_floor }}</td>
+                            <td>{{ $visitors->created_at }}</td>
                             <td>
                                 <div class="d-flex">
                                 <a href="#" class="btn btn-icon btn-outline-primary">
@@ -68,11 +68,11 @@
                         @php
                             $sqn++;
                         @endphp
-                    @endforeach --}}
+                    @endforeach
                 <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>Apartment</th>
+                        <th>Flat No</th>
                         <th>Name</th>
                         <th>Entry</th>
                         <th>Exit</th>

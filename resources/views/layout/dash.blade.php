@@ -130,7 +130,7 @@
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item">
-                                <a href="#" class="menu-link">
+                                <a href="{{ route('visitors.create') }}" class="menu-link">
                                     <div class="text-truncate" data-i18n="Add">Add</div>
                                 </a>
                             </li>
@@ -246,11 +246,10 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row g-6">
-
-
-
+                            {{-- @yield('scripts') --}}
                             {{-- containt --}}
                             @yield('containt')
+
                         </div>
                     </div>
                     <!-- / Content -->
