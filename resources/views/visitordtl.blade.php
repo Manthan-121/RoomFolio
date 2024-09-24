@@ -33,9 +33,9 @@
                         <th>#</th>
                         <th>Flat No</th>
                         <th>Name</th>
+                        <th>Reason</th>
                         <th>Entry</th>
                         <th>Exit</th>
-                        <th>Reason</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -46,23 +46,30 @@
                     @foreach ($visitors as $visitors)
                         <tr>
                             <td>{{ $sqn }}</td>
-                            <td>{{ $visitors->ap_remark }} {{$visitors->flate_no}}</td>
-                            <td>{{ $visitors->ap_remark }}</td>
-                            <td>{{ $visitors->ap_tot_floor }}</td>
-                            <td>{{ $visitors->created_at }}</td>
+                            <td>{{ $visitors->ap_remark }} {{ $visitors->flate_no }}</td>
+                            <td>{{ $visitors->vis_name }}</td>
+                            <td>{{ $visitors->vis_reason }}</td>
+                            <td>{{ $visitors->vis_entry_date }} {{ $visitors->vis_entry_time }}</td>
+                            <td>
+                                @if ($visitors->vis_exit_date == null && $visitors->vis_exit_date == null)
+                                    {{ 'NULL' }}
+                                @else
+                                    {{ $visitors->vis_exit_date }} {{ $visitors->vis_exit_time }}
+                                @endif
+                            </td>
                             <td>
                                 <div class="d-flex">
-                                <a href="#" class="btn btn-icon btn-outline-primary">
-                                    <span class="tf-icons bx bxs-edit"></span>
-                                </a>
-                                <form action="#" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-icon btn-outline-danger">
-                                        <span class="tf-icons bx bx-trash"></span>
-                                    </button>
-                                </form>
-                            </div>
+                                    <a href="#" class="btn btn-icon btn-outline-primary">
+                                        <span class="tf-icons bx bxs-edit"></span>
+                                    </a>
+                                    <form action="#" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-icon btn-outline-danger">
+                                            <span class="tf-icons bx bx-trash"></span>
+                                        </button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                         @php
@@ -74,9 +81,9 @@
                         <th>#</th>
                         <th>Flat No</th>
                         <th>Name</th>
+                        <th>Reason</th>
                         <th>Entry</th>
                         <th>Exit</th>
-                        <th>Reason</th>
                         <th>Action</th>
                     </tr>
                 </tfoot>

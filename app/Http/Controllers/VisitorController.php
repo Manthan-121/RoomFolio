@@ -16,7 +16,7 @@ class VisitorController extends Controller
             ->get();
 
         return view('visitordtl', compact('visitors'));
-        // return $visitors;
+        // return $visitor€s;
     }
 
     public function create()
