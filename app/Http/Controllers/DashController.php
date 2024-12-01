@@ -15,7 +15,7 @@ class DashController extends Controller
         $totPass = DB::table("tbl_vis_pass")->count();
         $totVisitor = DB::table("tbl_visitor")->count();
         $tottodayEntry = DB::table("tbl_visitor")->whereDate('created_at', today())->count();
-        $tottodayExit = DB::table("tbl_visitor")->whereDate('vis_exit_time', today())->count();
+        $tottodayExit = DB::table("tbl_visitor")->whereDate('vis_exit_date', today())->count();
 
 
         return view('home',compact('totApart','totFlatRegi','totCategory','totPass','totVisitor','tottodayEntry','tottodayExit'));

@@ -11,7 +11,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
                     <div class="avatar me-4">
-                        <span class="avatar-initial rounded bg-label-primary"><i class="bx bxs-truck bx-lg"></i></span>
+                        <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-buildings bx-lg"></i></span>
                     </div>
                     <h4 class="mb-0">{{ $totApart }}</h4>
                 </div>
@@ -24,7 +24,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
                     <div class="avatar me-4">
-                        <span class="avatar-initial rounded bg-label-warning"><i class="bx bx-error bx-lg"></i></span>
+                        <span class="avatar-initial rounded bg-label-warning"><i class="bx bx-detail bx-lg"></i></span>
                     </div>
                     <h4 class="mb-0">{{ $totFlatRegi }}</h4>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="d-flex align-items-center mb-2">
                     <div class="avatar me-4">
                         <span class="avatar-initial rounded bg-label-danger"><i
-                                class="bx bx-git-repo-forked bx-lg"></i></span>
+                                class="bx bx-id-card bx-lg"></i></span>
                     </div>
                     <h4 class="mb-0">{{ $totPass }}</h4>
                 </div>
@@ -51,7 +51,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
                     <div class="avatar me-4">
-                        <span class="avatar-initial rounded bg-label-info"><i class="bx bx-time-five bx-lg"></i></span>
+                        <span class="avatar-initial rounded bg-label-info"><i class="bx bx-category bx-lg"></i></span>
                     </div>
                     <h4 class="mb-0">{{ $totCategory }}</h4>
                 </div>
@@ -67,7 +67,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
                     <div class="avatar me-4">
-                        <span class="avatar-initial rounded bg-label-primary"><i class="bx bxs-truck bx-lg"></i></span>
+                        <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-male-female bx-lg"></i></span>
                     </div>
                     <h4 class="mb-0">{{ $tottodayEntry }}</h4>
                 </div>
@@ -80,7 +80,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
                     <div class="avatar me-4">
-                        <span class="avatar-initial rounded bg-label-warning"><i class="bx bx-error bx-lg"></i></span>
+                        <span class="avatar-initial rounded bg-label-warning"><i class="bx bx-male-female bx-lg"></i></span>
                     </div>
                     <h4 class="mb-0">{{ $tottodayExit }}</h4>
                 </div>
@@ -94,7 +94,7 @@
                 <div class="d-flex align-items-center mb-2">
                     <div class="avatar me-4">
                         <span class="avatar-initial rounded bg-label-danger"><i
-                                class="bx bx-git-repo-forked bx-lg"></i></span>
+                                class="bx bx-male-female bx-lg"></i></span>
                     </div>
                     <h4 class="mb-0">{{ $totVisitor }}</h4>
                 </div>

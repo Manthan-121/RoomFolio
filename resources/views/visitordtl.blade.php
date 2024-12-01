@@ -87,6 +87,7 @@
                             $sqn++;
                         @endphp
                     @endforeach
+                </tbody>
                 <tfoot>
                     <tr>
                         <th>#</th>

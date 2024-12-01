@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashController;
+use App\Http\Controllers\PassController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\ApartmentController;
@@ -67,6 +68,8 @@ Route::middleware(['admin'])->group(function () {
 
     Route::resource('visitors', VisitorController::class);
 
+    Route::resource('pass', PassController::class);
+    Route::get('/pass/pshow/{id}',[PassController::class, 'showPass'])->name('showPass');
 
     // profile rout
     Route::get('profile', function () {
