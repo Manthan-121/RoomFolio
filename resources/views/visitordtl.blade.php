@@ -20,6 +20,11 @@
             {{ session('edt-success') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+    @elseif (session('exit-success'))
+        <div class="alert alert-success alert-dismissible" role="alert">
+            {{ session('exit-success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     @endif
 
     <!-- Fixed Header -->
@@ -36,7 +41,7 @@
                         <th>Reason</th>
                         <th>Entry</th>
                         <th>Exit</th>
-                        <th>Action</th>
+                        {{-- <th>Action</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -52,12 +57,18 @@
                             <td>{{ $visitors->vis_entry_date }} {{ $visitors->vis_entry_time }}</td>
                             <td>
                                 @if ($visitors->vis_exit_date == null && $visitors->vis_exit_date == null)
-                                    {{ 'NULL' }}
+                                    <form action="{{ route('exit') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="vid" value="{{ $visitors->vis_id  }}">
+                                        <button type="submit" class="btn btn-icon btn-success">
+                                            <span class="tf-icons bx bx-exit"></span>
+                                        </button>
+                                    </form>
                                 @else
                                     {{ $visitors->vis_exit_date }} {{ $visitors->vis_exit_time }}
                                 @endif
                             </td>
-                            <td>
+                            {{-- <td>
                                 <div class="d-flex">
                                     <a href="#" class="btn btn-icon btn-outline-primary">
                                         <span class="tf-icons bx bxs-edit"></span>
@@ -70,7 +81,7 @@
                                         </button>
                                     </form>
                                 </div>
-                            </td>
+                            </td> --}}
                         </tr>
                         @php
                             $sqn++;
@@ -84,7 +95,7 @@
                         <th>Reason</th>
                         <th>Entry</th>
                         <th>Exit</th>
-                        <th>Action</th>
+                        {{-- <th>Action</th> --}}
                     </tr>
                 </tfoot>
             </table>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\ApartmentController;
@@ -18,9 +19,9 @@ Route::controller(AdminAuthController::class)->group(function () {
 
 Route::middleware(['admin'])->group(function () {
     // home rout
-    Route::get('/', function () {
-        return view('home');
-    })->name('home');
+    Route::controller(DashController::class)->group(function () {
+        Route::get('/', 'index')->name('home');
+    });
 
     Route::controller(ApartmentController::class)->group(function () {
         Route::get('Apartment', 'showApartment')->name('apartment');
@@ -32,6 +33,8 @@ Route::middleware(['admin'])->group(function () {
         Route::put('Apartments/edit/{id}', 'updateApartment')->name('put-apartmentedit');
 
         Route::delete('Apartment-delete/{id}', 'deleteApartment')->name('apatmentdelete');
+
+        Route::post('/exit', 'exit')->name('exit');
 
     });
 

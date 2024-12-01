@@ -39,9 +39,9 @@ class ApartmentController extends Controller
 
     public function editApartment($id = null)
     {
-        if($id == null){
+        if ($id == null) {
             return redirect()->route('apartment');
-        }else{
+        } else {
             $apartment = DB::table('tbl_apartment')->where('ap_id', $id)->first();
             return view('editapart', compact('apartment'));
         }
@@ -68,5 +68,15 @@ class ApartmentController extends Controller
     {
         DB::table('tbl_apartment')->where('ap_id', $id)->delete();
         return redirect()->route('apartment')->with('del-success', 'Apartment deleted successfully.');
+    }
+
+    public function exit(Request $request)
+    {
+        DB::table('tbl_visitor')->where('vis_id', $request->vid)
+            ->update([
+                'vis_exit_time' => now()->format('H:i:s'),
+                'vis_exit_date' => now()->format('Y-m-d'),
+            ]);
+        return redirect()->route('visitors.index')->with('exit-success', 'Visitor exit successfully.');
     }
 }

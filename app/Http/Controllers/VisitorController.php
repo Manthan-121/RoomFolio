@@ -13,6 +13,7 @@ class VisitorController extends Controller
             ->join('tbl_apartment', 'tbl_visitor.ap_id', '=', 'tbl_apartment.ap_id')
             ->join('tbl_floor_details','tbl_visitor.floor_id','=','tbl_floor_details.floor_id')
             ->select('tbl_visitor.*', 'tbl_apartment.*','tbl_floor_details.*')
+            ->orderBy('vis_exit_time', 'asc')
             ->get();
 
         return view('visitordtl', compact('visitors'));
