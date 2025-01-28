@@ -17,7 +17,7 @@ RoomFolio is an apartment visitor management system designed for use by Security
 
 ## Prerequisites
 Ensure the following tools are installed on your system:
-- **PHP** >= 8.0
+- **PHP** >= 8.2
 - **Composer** >= 2.x
 - **MySQL** >= 5.7
 - **Node.js** (for frontend dependencies)
